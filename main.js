@@ -178,10 +178,32 @@
         }
       }
     }else if(query == 3){
+      // 「〇〇は××の隣である」と「××は〇〇の隣である」は同時に出力されないようにする。
       A = [...whats_is_next[Math.floor(Math.random() * whats_is_next.length)]];
+      let B = [...A];
+      B[3] = A[1];
+      B[4] = A[2];
+      B[1] = A[3];
+      B[2] = A[4];
+      whats_is_next.forEach((item, index) => {
+        if(array_equal(item,A) || array_equal(item,A)) {
+          whats_is_next.splice(index, 1);
+        }
+      });
       items_to_display.push(`${A[2]}の隣は${A[4]}である。`);
     }else{
+      // 「〇〇は××の隣ではない」と「××は〇〇の隣ではない」は同時に出力されないようにする。
       A = [...whats_is_not_next[Math.floor(Math.random() * whats_is_not_next.length)]];
+      let B = [...A];
+      B[3] = A[1];
+      B[4] = A[2];
+      B[1] = A[3];
+      B[2] = A[4];
+      whats_is_not_next.forEach((item, index) => {
+        if(array_equal(item,A) || array_equal(item,A)) {
+          whats_is_not_next.splice(index, 1);
+        }
+      });
       items_to_display.push(`${A[2]}の隣は${A[4]}ではない。`);
     }
     conditions.push(A);
@@ -266,7 +288,6 @@
         conditionList.removeChild(conditionList.lastChild);
       }
       const right_or_wrong_dict = check_the_answer(arr)[1];
-      console.log(right_or_wrong_dict);
       items_to_display.forEach((item,i) => {
         let tmp = document.createElement("li");
         tmp.innerHTML = item;
