@@ -1,0 +1,76 @@
+body {
+  color: #333;
+}
+body .container {
+  max-width: 800px;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+body .container .problem-statement {
+  margin-bottom: 30px;
+}
+body .container .problem-statement p {
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+body .container .problem-statement p:nth-of-type(3) {
+  font-size: 16px;
+}
+body .container .condition-list {
+  padding: 30px;
+  border: 1px solid #333;
+  margin-bottom: 50px;
+  border-radius: 12px;
+}
+body .container .condition-list li {
+  list-style: inside;
+  line-height: 2;
+}
+body .container form {
+  margin-bottom: 30px;
+}
+body .container form .users-answer {
+  width: 130px;
+  font-size: 30px;
+}
+body .container form .sent-answer {
+  margin-left: 40px;
+  font-size: 20px;
+}
+body .container .judgement-box {
+  font-size: 30px;
+  display: flex;
+  position: relative;
+  margin-bottom: 40px;
+}
+body .container .judgement-box::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 300px;
+  height: 2px;
+  background-color: #333;
+}
+body .container .judgement-box .judgement-text {
+  margin-left: 10px;
+}
+body .container .answers-list {
+  display: none;
+  padding: 30px;
+  margin-bottom: 50px;
+  background: rgb(201, 239, 255);
+  border-radius: 12px;
+}
+body .container .answers-list li {
+  list-style: inside;
+  line-height: 2;
+}
+body .container .answers-list li:nth-child(1) {
+  margin-top: 10px;
+}
+body .container .answers-list.active {
+  display: block;
+}/*# sourceMappingURL=style.css.map */

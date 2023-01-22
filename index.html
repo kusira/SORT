@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="js">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+    <title>SORT</title>
+</head>
+<body>
+    <div class="container">
+        <div class="problem-statement">
+            <p>A, B, C, D, E の5人が一列に並んでおり、5人の順番について以下のことが分かっています。</p>
+            <p>以下の条件を全て満たす順番を1つ答えてください。</p>
+            <p>答えは半角英大文字、区切り文字なしで回答してください (例: ACDCE)</p>
+        </div>
+
+        <ul class="condition-list" id="condition-list">
+        </ul>
+
+        <form action="">
+            <input type="text" class="users-answer" id="users-answer" autocomplete="off">
+            <input type="button" value="回答" class="sent-answer" id="sent-answer">
+        </form>
+        <div class="judgement-box">
+            <p class="judgement-marker" id="judgement-marker" data-name="">正誤判定: </p>
+            <p class="judgement-text" id="judgement-text" data-name=""></p>
+        </div>
+
+        <ul class="answers-list" id="answers-list">回答例
+        </ul>
+    </div>
+</body>
+</html>
